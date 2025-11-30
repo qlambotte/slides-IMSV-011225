@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "slides.html#e",
+    "href": "slides.html#e",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "3.4.E)",
+    "text": "3.4.E)\nDécomposez le nombre 150 en la somme de deux nombres tels que le produit de l’un par le carré de l’autre soit maximum."
+  },
+  {
+    "objectID": "slides.html#e-1",
+    "href": "slides.html#e-1",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "3.4.E)",
+    "text": "3.4.E)"
+  },
+  {
+    "objectID": "slides.html#primitives",
+    "href": "slides.html#primitives",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Primitives",
+    "text": "Primitives\nDéfinition: Soit \\(f\\) une fonction et \\(I\\subset\\text{dom}(f)\\). On dit qu’une fonction \\(F\\) définie sur \\(I\\) est une primitive de \\(f\\) sur \\(I\\) si: \\(F'(x)=f(x)\\) pour tout \\(x\\in I\\).\nPar exemple \\(x^3\\) est une primitive de \\(3x^2\\) sur \\(I=\\mathbb{R}\\) car \\((x^3)'=3x^2\\).\nDe même, \\(\\sin(x)\\) est une primitive de \\(\\cos(x)\\) sur \\(I=\\mathbb{R}\\) car \\((\\sin(x))'=\\cos(x)\\)."
+  },
+  {
+    "objectID": "slides.html#primitives-1",
+    "href": "slides.html#primitives-1",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Primitives",
+    "text": "Primitives\nÉtant donnée une fonction \\(f\\) primitivable sur \\(I\\), disons \\(F'=f\\), alors \\(f\\) a une infinité de primitives, toutes de la forme \\(F+c\\), où \\(c\\in\\mathbb{R}\\).\nOn notera: \\(\\displaystyle\\int f(x)\\text{d}x=F(x)+c\\), \\(c\\in\\mathbb{R}\\)."
+  },
+  {
+    "objectID": "slides.html#formulaire",
+    "href": "slides.html#formulaire",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Formulaire:",
+    "text": "Formulaire:\nDans ce formulaire, on travaille toujours sur un intervalle \\(I\\) dans le domaine de l’intégrand. La constante \\(c\\) est un nombre réel.\n\n\\(\\displaystyle\\int x^n\\text{d}x=\\dfrac{x^{n+1}}{n+1}+c\\), \\(n\\in\\mathbb{Q}\\backslash\\{-1\\}\\).\n\\(\\displaystyle\\int \\dfrac{1}{x}\\text{d}x=\\ln(|x|)+c\\),\n\\(\\displaystyle\\int \\text{e}^x\\text{d}x=\\text{e}^x+c\\)\n\\(\\displaystyle\\int a^x\\text{d}x=\\dfrac{a^x}{\\ln(a)}+x\\)"
+  },
+  {
+    "objectID": "slides.html#formulaire-1",
+    "href": "slides.html#formulaire-1",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Formulaire:",
+    "text": "Formulaire:\n\n\\(\\displaystyle\\int \\cos(x)\\text{d}x=\\sin(x)+c\\)\n\\(\\displaystyle\\int \\sin(x)\\text{d}x=-\\cos(x)+c\\)\n\\(\\displaystyle\\int \\dfrac{1}{\\cos^2(x)}\\text{d}x=\\int 1+\\tan^2(x)\\text{d}x=\\tan(x)+c\\)"
+  },
+  {
+    "objectID": "slides.html#linéarité",
+    "href": "slides.html#linéarité",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Linéarité",
+    "text": "Linéarité\n\\[\\int af(x)+bg(x)\\text{d}x=a\\int f(x)\\text{d}x+b\\int g(x)\\text{d}x\\]\nExemple:\n\\[\n\\begin{align*}\n\\int 3x-\\sin(x)\\text{d}x&=3\\int x\\text{d}x-\\int\\sin(x)\\text{d}x\\\\\n&=3\\dfrac{x^2}{2}-(-\\cos(x))+c\\\\\n&=3\\dfrac{x^2}{2}+\\cos(x)+c\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "slides.html#intégration-par-parties",
+    "href": "slides.html#intégration-par-parties",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Intégration par parties",
+    "text": "Intégration par parties\n\\[\n\\int f'(x)g(x)\\text{d}x=f(x)g(x)-\\int f(x)g'(x)\\text{d}x\n\\]\nExemple:\n\\[ \\int x\\text{e}^x\\]\nIci: l’idée est de tuer \\(x\\) en le dérivant."
+  },
+  {
+    "objectID": "slides.html#intégration-par-parties-1",
+    "href": "slides.html#intégration-par-parties-1",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Intégration par parties",
+    "text": "Intégration par parties\nOn choisit: \\(f'(x)=\\text{e}^x\\) et \\(g(x)=x\\). Dans ce cas: \\(f(x)=\\text{e}^x\\) et \\(g'(x)=1\\). Donc, \\[\n\\begin{align*}\n\\int x\\text{e}^x\\text{d}x&=x\\text{e}^x-\\int \\text{e}^x\\text{d}x\\\\\n&=x\\text{e}^x-\\text{e}^x+c\\\\\n&=(x-1)\\text{e}^x+c.\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "slides.html#intégration-par-parties-2",
+    "href": "slides.html#intégration-par-parties-2",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Intégration par parties",
+    "text": "Intégration par parties\nA utiliser si l’intégrand est de la forme\n\\[\\text{polynôme}\\cdot \\begin{cases}\n\\text{cosinus}\\\\\n\\text{sinus}\\\\\n\\text{exponentielle}\\\\\n\\text{logarithme}\n\\end{cases} \\]\nDans le cas du logarithme, on prendra \\(g(x)=\\text{logarithme}\\), ce qui permettra de tuer le logarithme. Dans les autres cas, on prendra \\(g(x)=\\text{polynôme}\\) de sorte à diminuer le degré pas à pas (on devra intégrer par partir autant de fois que le degré du polynôme)."
+  },
+  {
+    "objectID": "slides.html#changement-de-variable",
+    "href": "slides.html#changement-de-variable",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Changement de variable:",
+    "text": "Changement de variable:\n\\[\\int f(g(x))g'(x)\\text{d}x=\\int f(u)\\text{d}u=F(u)+c=F(g(x))+c\\]\nExemple (4.1.A) 1): \\(\\displaystyle\\int 2x(1+x^2)^5\\text{d}x\\)\nIci, on remarque que \\(2x=(1+x^2)'\\). Donc on choisit \\(u=1+x^2\\). Ainsi, \\(\\text{d}u=(1+x^2)'\\text{d}x=2x\\text{d}x\\). Donc\n\\[\n\\begin{align*}\n\\int 2x(1+x^2)^5\\text{d}x&=\\int u^5\\text{d}u\\\\\n&=\\dfrac{u^6}{6}+c=\\dfrac{(1+x^2)^6}{6}+c\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "slides.html#changement-de-variable-1",
+    "href": "slides.html#changement-de-variable-1",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Changement de variable:",
+    "text": "Changement de variable:\n\\[\\int f(g(x))g'(x)\\text{d}x=\\int f(u)\\text{d}u=F(u)+c=F(g(x))+c\\]\nExemple (4.1.A) 5): \\(\\displaystyle\\int \\dfrac{x}{x^2+1}\\text{d}x\\)\nIci on remarque que \\(x\\) est presque la dérivée de \\(x^2+1\\): \\((x^2+1)'=2x\\). Il manque donc un facteur 2: \\[\n\\int \\dfrac{x}{x^2+1}\\text{d}x=\\int\\dfrac{1}{2} \\dfrac{2x}{x^2+1}\\text{d}x\n\\]"
+  },
+  {
+    "objectID": "slides.html#section",
+    "href": "slides.html#section",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "",
+    "text": "Donc on choisit \\(u=x^2+1\\). Donc \\(\\text{d}u=2x\\text{d}x\\). Donc\n\\[\n\\begin{align*}\n\\int \\dfrac{x}{x^2+1}\\text{d}x&=\\dfrac{1}{2}\\int\\dfrac{2x}{x^2+1} \\text{d}x\\\\\n&=\\dfrac{1}{2}\\int \\dfrac{1}{u}\\text{d}u\\\\\n&=\\dfrac{1}{2}\\ln(|u|)+c\\\\\n&=\\dfrac{\\ln(|x^2+1|)}{2}+c\\\\\n&= \\dfrac{\\ln(x^2+1)}{2}+c\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "slides.html#méthodologie",
+    "href": "slides.html#méthodologie",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Méthodologie:",
+    "text": "Méthodologie:\n\nAnalyser la nature algébrique de l’intégrand:\n\n\nEst-ce une somme-différence? Si oui: appliquer la linéarité\nUn produit/quotient? Si oui\n\n- Puis-je simplfier/développer pour appliquer la linéarité?\n- Est-ce qui j'observe qu'un facteur est presque la dérivée d'un autre?\n- Y a-t-il une exponentielle? \n- Y a-t-il un logarithme? Si oui, le tuer par parties."
+  },
+  {
+    "objectID": "slides.html#méthodologie-1",
+    "href": "slides.html#méthodologie-1",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Méthodologie:",
+    "text": "Méthodologie:\n\nBien identifier les ingrédients de la formule:\n\n\nPar parties: qui est \\(f'(x)\\), qui est \\(g(x)\\)?\nChangement de variables: quel changement de variable \\(u\\)? Que vaut \\(\\text{d}u\\)?\n\n\nDériver votre réponse finale pour vérifier que vos calculs sont corrects!!!\n\nSi vous êtes perdu.e: tentez une des méthodes de calculs (il n’y en a que 3…)"
+  },
+  {
+    "objectID": "slides.html#sélection",
+    "href": "slides.html#sélection",
+    "title": "Introduction mathématique aux sciences de la vie",
+    "section": "Sélection",
+    "text": "Sélection\n\n4.1.A) À savoir faire pour l’examen: 1, 2, 6, 7, 8, 9.\n4.1.B) À savoir faire pour l’examen: 1, 3, 5, 6, 7, 8.\n4.1.C) À savoir faire pour l’examen: tout sauf le 7, 9 et 15.\n4.1.D) À savoir faire pour l’examen: tout sauf 9, 11, 12, 13, 17, 18, 21, 22, 24."
+  }
+]
