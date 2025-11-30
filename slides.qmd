@@ -1,0 +1,225 @@
+---
+title: "Introduction mathématique aux sciences de la vie"
+subtitle: "Séance d'exercices du 01/12/25"
+lang: fr
+format: 
+ revealjs:
+      theme: [default, clean.scss]
+      qrcode: 'assets/qrcode.png'
+      pdfl: '[Télécharger le PDF](assets/slides.pdf){.pdf-link target="_blank"}'
+      menu:
+        side: left
+      slide-number: true
+      transition: fade
+      revealjs-plugins:
+        - tldreveal
+      template-partials:
+        - title-slide.html
+
+---
+::: {.content-hidden}
+
+\newcommand{\dom}[1]{\text{dom}{\left(#1\right)}}
+\newcommand{\IR}{\mathbb{R}}
+\newcommand{\e}{\text{e}}
+\newcommand{\dx}{\text{d}x}
+\newcommand{\IQ}{\mathbb{Q}}
+\newcommand{\du}{\text{d}u}
+
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\nv}[1]{\lVert\overrightarrow{#1}\rVert}
+
+:::
+
+
+# Remédiations
+ 
+- Lundi (Biologie+Pharma): Q/R (Attention: début de la remédiation à 16h15)
+
+**Pour les Q/R**: --> Préparez des questions !!!
+
+# Optimisation
+
+## 3.4.E)
+
+Décomposez le nombre 150 en la somme de deux nombres tels que le produit de l’un par le carré de l’autre
+soit maximum.
+
+## 3.4.E)
+
+# QCM sur les dérivées
+
+-> correction dans le PDF
+
+# Intégration
+
+## Primitives
+
+**Définition**: Soit $f$ une fonction et $I\subset\text{dom}(f)$. On dit qu'une fonction $F$ définie sur $I$ est une primitive de $f$ sur $I$ si: $F'(x)=f(x)$ pour tout $x\in I$.
+
+Par exemple $x^3$ est une primitive de $3x^2$ sur $I=\IR$ car $(x^3)'=3x^2$.
+
+De même, $\sin(x)$ est une primitive de $\cos(x)$ sur $I=\IR$ car $(\sin(x))'=\cos(x)$.
+
+## Primitives
+
+Étant donnée une fonction $f$ primitivable sur $I$, disons $F'=f$, alors $f$ a une infinité de primitives, toutes de la forme $F+c$, où $c\in\IR$.
+
+On notera: $\displaystyle\int f(x)\dx =F(x)+c$, $c\in\IR$.
+
+## Formulaire:
+
+Dans ce formulaire, on travaille toujours sur un intervalle $I$ dans le domaine de l'intégrand. La constante $c$ est un nombre réel.
+
+- $\displaystyle\int x^n\dx=\dfrac{x^{n+1}}{n+1}+c$, $n\in\IQ\backslash\{-1\}$.
+- $\displaystyle\int \dfrac{1}{x}\dx=\ln(|x|)+c$,
+- $\displaystyle\int \e^x\dx=\e^x+c$
+- $\displaystyle\int a^x\dx=\dfrac{a^x}{\ln(a)}+x$
+
+## Formulaire:
+
+
+- $\displaystyle\int \cos(x)\dx=\sin(x)+c$
+- $\displaystyle\int \sin(x)\dx=-\cos(x)+c$
+- $\displaystyle\int \dfrac{1}{\cos^2(x)}\dx=\int 1+\tan^2(x)\dx=\tan(x)+c$
+
+# Techniques de calcul
+
+## Linéarité
+
+$$\int af(x)+bg(x)\dx=a\int f(x)\dx+b\int g(x)\dx $$
+
+**Exemple**:
+
+$$
+\begin{align*}
+\int 3x-\sin(x)\dx&=3\int x\dx-\int\sin(x)\dx\\
+&=3\dfrac{x^2}{2}-(-\cos(x))+c\\
+&=3\dfrac{x^2}{2}+\cos(x)+c
+\end{align*}
+$$
+
+
+## Intégration par parties
+
+$$
+\int f'(x)g(x)\dx=f(x)g(x)-\int f(x)g'(x)\dx
+$$
+
+**Exemple**:
+
+$$ \int x\e^x$$
+
+Ici: l'idée est de tuer $x$ en le dérivant.
+
+## Intégration par parties
+
+
+On choisit: $f'(x)=\e^x$ et $g(x)=x$. Dans ce cas: $f(x)=\e^x$ et $g'(x)=1$.
+Donc,
+$$
+\begin{align*}
+\int x\e^x\dx&=x\e^x-\int \e^x\dx\\
+&=x\e^x-\e^x+c\\
+&=(x-1)\e^x+c.
+\end{align*}
+$$
+
+## Intégration par parties
+
+A utiliser si l'intégrand est de la forme 
+
+ $$\text{polynôme}\cdot \begin{cases}
+ \text{cosinus}\\
+ \text{sinus}\\
+ \text{exponentielle}\\
+ \text{logarithme}
+ \end{cases} $$
+
+ Dans le cas du logarithme, on prendra $g(x)=\text{logarithme}$, ce qui permettra de tuer le logarithme.
+ Dans les autres cas, on prendra $g(x)=\text{polynôme}$ de sorte à diminuer le degré pas à pas (on devra intégrer par partir autant de fois que le degré du polynôme).
+
+## Changement de variable:
+
+$$\int f(g(x))g'(x)\dx=\int f(u)\du=F(u)+c=F(g(x))+c$$
+
+
+
+**Exemple** (4.1.A) 1): $\displaystyle\int 2x(1+x^2)^5\dx$ 
+
+Ici, on remarque que $2x=(1+x^2)'$. Donc on choisit $u=1+x^2$. Ainsi, 
+$\du=(1+x^2)'\dx=2x\dx$. Donc
+                                                                            
+
+$$
+\begin{align*}
+\int 2x(1+x^2)^5\dx&=\int u^5\du\\
+&=\dfrac{u^6}{6}+c=\dfrac{(1+x^2)^6}{6}+c
+\end{align*}
+$$
+
+## Changement de variable:
+
+$$\int f(g(x))g'(x)\dx=\int f(u)\du=F(u)+c=F(g(x))+c$$
+
+
+
+**Exemple** (4.1.A) 5): $\displaystyle\int \dfrac{x}{x^2+1}\dx$
+
+Ici on remarque que $x$ est presque la dérivée de $x^2+1$: $(x^2+1)'=2x$. Il manque donc un facteur 2:
+$$
+\int \dfrac{x}{x^2+1}\dx=\int\dfrac{1}{2} \dfrac{2x}{x^2+1}\dx
+$$
+
+##
+
+Donc on choisit $u=x^2+1$. Donc $\du=2x\dx$. Donc
+
+$$
+\begin{align*}
+\int \dfrac{x}{x^2+1}\dx&=\dfrac{1}{2}\int\dfrac{2x}{x^2+1} \dx\\
+&=\dfrac{1}{2}\int \dfrac{1}{u}\du\\
+&=\dfrac{1}{2}\ln(|u|)+c\\
+&=\dfrac{\ln(|x^2+1|)}{2}+c\\
+&= \dfrac{\ln(x^2+1)}{2}+c
+\end{align*}
+$$
+
+## Méthodologie:
+
+1. Analyser la nature algébrique de l'intégrand:
+  a. Est-ce une somme-différence? Si oui: appliquer la linéarité
+  b. Un produit/quotient? Si oui
+
+    - Puis-je simplfier/développer pour appliquer la linéarité?
+    - Est-ce qui j'observe qu'un facteur est presque la dérivée d'un autre?
+    - Y a-t-il une exponentielle? 
+    - Y a-t-il un logarithme? Si oui, le tuer par parties. 
+
+## Méthodologie:
+
+
+2. Bien identifier les ingrédients de la formule:
+  a. Par parties: qui est $f'(x)$, qui est $g(x)$?
+  b. Changement de variables: quel changement de variable $u$? Que vaut $\du$?
+3. Dériver votre réponse finale pour **vérifier** que vos calculs sont corrects!!!
+
+Si vous êtes perdu.e: tentez une des méthodes de calculs (il n'y en a que 3...)
+
+# Exercices de calculs de primitives
+
+**Attention**: certains exercices sont difficiles: concentrez vous sur la sélection. Le reste est du dépassement
+
+**Correctif**: le correctif de la sélection est sur moodle.
+
+## Sélection
+
+- 4.1.A) À savoir faire pour l'examen: 1, 2, 6, 7, 8, 9.
+
+- 4.1.B) À savoir faire pour l'examen: 1, 3, 5, 6, 7, 8.
+
+- 4.1.C) À savoir faire pour l'examen: tout sauf le 7, 9 et 15.
+
+- 4.1.D) À savoir faire pour l'examen:  tout sauf 9, 11, 12, 13, 17, 18, 21, 22, 24.
+
+
